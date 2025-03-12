@@ -1,3 +1,21 @@
+controller.player2.onButtonEvent(ControllerButton.B, ControllerButtonEvent.Pressed, function () {
+    info.player2.setLife(3)
+})
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    info.setLife(3)
+})
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    info.player2.changeLifeBy(-1)
+})
+controller.player2.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, function () {
+    info.player1.changeLifeBy(-1)
+})
+info.onLifeZero(function () {
+    game.setGameOverMessage(false, "GAME OVER!")
+})
+info.player2.onLifeZero(function () {
+    game.setGameOverMessage(false, "GAME OVER!")
+})
 scene.setBackgroundImage(img`
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
@@ -158,4 +176,4 @@ let pacy_2 = sprites.create(img`
     `, SpriteKind.Player)
 controller.moveSprite(pacy, 100, 100)
 controller.player2.moveSprite(pacy_2, 100, 100)
-game.splash("Connected to", randint(0, 9999))
+game.splash("Connected to", randint(1000, 9999))
