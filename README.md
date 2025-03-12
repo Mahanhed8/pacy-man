@@ -20,7 +20,7 @@ To edit this repository in MakeCode.
 * click on **Import** then click on **Import URL**
 * paste **https://github.com/mahanhed8/pacy-man** and click import
 
-#Poopy Day
+# Poopy Day
 - Try To Make Your Joiners Hate You By Killing Them Every time Thay Join
 
 ## Blocks preview
